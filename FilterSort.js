@@ -18,7 +18,7 @@ const sortDropdown = document.querySelector("#sort")
 
             if (sortDropdown.value == "date-asc") {
                 function compareNumbers(a, b){
-                    return a.createdAt - b.createdAt;
+                    return b.createdAt - a.createdAt;
                 }
                 const sortedBooks = newBooks.sort(compareNumbers)
                 RenderBooks(sortedBooks)
@@ -26,7 +26,7 @@ const sortDropdown = document.querySelector("#sort")
             }
             else if(sortDropdown.value == "date-desc"){
                 function compareNumbers(a, b){
-                    return b.createdAt - a.createdAt;
+                    return a.createdAt - b.createdAt;
                 }
                 const sortedBooks = newBooks.sort(compareNumbers)
                 RenderBooks(sortedBooks)

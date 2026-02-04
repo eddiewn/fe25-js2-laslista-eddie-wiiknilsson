@@ -8,6 +8,21 @@
     </head>
     <body>
         <main>
+            <section>
+                <select id="filter">
+                    <option value="all">All</option>
+                    <option value="favorites">Favorite</option>
+                </select>
+
+                <select id="sort">
+                    <option value="date-asc">Först till sist</option>
+                    <option value="date-desc">Sist till först</option>
+                    <option value="title-asc">A till Ö : Title</option>
+                    <option value="title-desc">Ö till A : Title</option>
+                    <option value="author-asc">A till Ö : Author</option>
+                    <option value="author-desc">Ö till A : Author</option>
+                </select>
+            </section>
             <section id="upload-book-section">
                 <input 
                     id="book-title-upload" 
@@ -30,5 +45,6 @@
 
         <script type="module" src="backend.js"></script>
         <script type="module" src="RenderBooks.js"></script>
+        <script type="module" src="FilterSort.js"></script>
     </body>
 </html>

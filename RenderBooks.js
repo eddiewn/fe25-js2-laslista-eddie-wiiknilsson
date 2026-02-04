@@ -1,9 +1,8 @@
-import { books } from "./backend.js";
 import { favoriteBook } from "./backend.js";
 import { deleteBook } from "./backend.js";
 
 
-export function RenderBooks(){
+export function RenderBooks(books){
     document.querySelector("#book-showcase-section").innerHTML = "";
     books.map((book) => {
 

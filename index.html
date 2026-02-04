@@ -1,19 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Läslista</title>
-</head>
-<body>
-    <main>
-        <section id="upload-book">
-            <button id="upload-btn">
-                Upload Book
-            </button>
-        </section>
-    </main>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Läslista</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <main>
+            <section id="upload-book-section">
+                <input 
+                    id="book-title-upload" 
+                    type="text" 
+                    placeholder="Title" 
+                />
+                <input
+                    id="book-author-upload"
+                    type="text"
+                    placeholder="Author"
+                />
+                <button id="upload-btn">
+                    Upload Book
+                </button>
+            </section>
+            <section id="book-showcase-section">
+                
+            </section>
+        </main>
 
-    <script src="backend.js"></script>
-</body>
+        <script type="module" src="backend.js"></script>
+        <script type="module" src="RenderBooks.js"></script>
+    </body>
 </html>

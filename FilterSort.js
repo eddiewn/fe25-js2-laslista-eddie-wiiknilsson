@@ -48,17 +48,17 @@ const sortDropdown = document.querySelector("#sort")
 
             }
             else if(sortDropdown.value == "author-asc"){
-                function compareTitles(a,b){
+                function compareAuthor(a,b){
                     return a.author.localeCompare(b.author);
                 }
-                const sortedAuthor = newBooks.sort(compareTitles)
+                const sortedAuthor = newBooks.sort(compareAuthor)
                 RenderBooks(sortedAuthor)
             }
             else if(sortDropdown.value == "author-desc"){
-                function compareTitles(a,b){
+                function compareAuthor(a,b){
                     return b.author.localeCompare(a.author);
                 }
-                const sortedAuthor = newBooks.sort(compareTitles)
+                const sortedAuthor = newBooks.sort(compareAuthor)
                 RenderBooks(sortedAuthor)
 
             }

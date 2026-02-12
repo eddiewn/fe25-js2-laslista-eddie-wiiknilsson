@@ -51,7 +51,7 @@ export const fetchBooks = async () => {
         books.push(book);
     });
     console.log(books);
-    RenderBooks(books);
+    RenderBooks(books.reverse());
 };
 
 export const favoriteBook = async (book) => {

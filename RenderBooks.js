@@ -1,9 +1,6 @@
 import { favoriteBook } from "./backend.js";
 import { deleteBook } from "./backend.js";
-import { FilterSort } from "./FilterSort.js";
 
-const filterDropdown = document.querySelector("#filter");
-const sortDropdown = document.querySelector("#sort")
 
 export function RenderBooks(books){
     console.log(books);

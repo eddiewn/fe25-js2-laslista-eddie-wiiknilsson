@@ -87,15 +87,12 @@ fetchBooks();
 const filterDropdown = document.querySelector("#filter");
 const sortDropdown = document.querySelector("#sort");
 
-filterDropdown.addEventListener("change", () => {
-    let FilterSortedBooks = FilterSort(books);
+const FilterSortListener = () => {
+    let FilterSortedBooks = FilterSort(books, sortDropdown.value, filterDropdown.value);
     RenderBooks(FilterSortedBooks);
-});
+}
 
-sortDropdown.addEventListener("change", () => {
-    let FilterSortedBooks = FilterSort(books);
-    console.log(FilterSortedBooks);
-    RenderBooks(FilterSortedBooks);
-});
+filterDropdown.addEventListener("change", FilterSortListener);
+sortDropdown.addEventListener("change", FilterSortListener);
 
 document.querySelector("#upload-btn").addEventListener("click", uploadBook);

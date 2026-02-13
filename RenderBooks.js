@@ -1,11 +1,14 @@
 import { favoriteBook } from "./backend.js";
 import { deleteBook } from "./backend.js";
+import { FilterSort } from "./FilterSort.js";
 
+const filterDropdown = document.querySelector("#filter");
+const sortDropdown = document.querySelector("#sort")
 
 export function RenderBooks(books){
+    console.log(books);
     document.querySelector("#book-showcase-section").innerHTML = "";
     books.map((book) => {
-
         const h2 = document.createElement("h2")
         h2.textContent = `Title: ${book.title}`;
 
@@ -33,5 +36,4 @@ export function RenderBooks(books){
 
         document.querySelector("#book-showcase-section").append(h2, p, pFav, favBtn, delBtn)
     })
-
 }

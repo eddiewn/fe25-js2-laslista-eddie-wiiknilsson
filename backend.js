@@ -1,5 +1,6 @@
 import Book from "./BookClass.js";
 import {RenderBooks} from "./RenderBooks.js";
+import { FilterSort } from "./FilterSort.js";
 
 export let books = [];
 
@@ -51,7 +52,7 @@ export const fetchBooks = async () => {
         books.push(book);
     });
     console.log(books);
-    RenderBooks(books.reverse());
+    RenderBooks(FilterSort(books.reverse()));
 };
 
 export const favoriteBook = async (book) => {
@@ -82,5 +83,19 @@ export const deleteBook = async (book) => {
 }
 
 fetchBooks();
+
+const filterDropdown = document.querySelector("#filter");
+const sortDropdown = document.querySelector("#sort");
+
+filterDropdown.addEventListener("change", () => {
+    let FilterSortedBooks = FilterSort(books);
+    RenderBooks(FilterSortedBooks);
+});
+
+sortDropdown.addEventListener("change", () => {
+    let FilterSortedBooks = FilterSort(books);
+    console.log(FilterSortedBooks);
+    RenderBooks(FilterSortedBooks);
+});
 
 document.querySelector("#upload-btn").addEventListener("click", uploadBook);
